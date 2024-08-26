@@ -12,4 +12,9 @@ describe("isSubsequence", function() {
     expect(isSubsequence("notasubstring", "banana")).toBe(false);
     expect(isSubsequence("almost", "almossssss")).toBe(false);
   });
+  
+  it("should handle repeated letters correctly", function() {
+    expect(isSubsequence("abba", "aba")).toBe(false);
+    expect(isSubsequence("aba", "abba")).toBe(true);
+  })
 });
